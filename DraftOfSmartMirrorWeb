@@ -1,0 +1,27 @@
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+   return render_template('BigTitle.html')
+
+@app.route('/SecBigTitle.html')
+def hello():
+   return render_template('SecBigTitle.html')
+
+@app.route('/1.html')
+def hello1():
+   return render_template('1.html')
+
+@app.route('/2.html')
+def hello2():
+   return render_template('2.html')
+
+@app.route('/cakes')
+def cakes():
+   return 'Yummy cakes!'
+
+
+if __name__ == '__main__':
+   app.run(debug=True)
